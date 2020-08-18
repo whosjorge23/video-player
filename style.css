@@ -226,8 +226,7 @@ select > option {
 }
 
 .credit {
-  display: flex !important;
-  flex-direction: column !important;
+  color: #2b2b2b;
 }
 
 /* Media Query: Large Smartphone (Vertical) */

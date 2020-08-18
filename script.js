@@ -12,6 +12,10 @@ const speed = document.querySelector(".player-speed");
 const fullscreenButton = document.querySelector(".fullscreen");
 const downloadButton = document.querySelector(".download");
 
+let videoArray = ['https://pixabay.com/it/videos/download/video-19204_small.mp4','https://pixabay.com/it/videos/download/video-24216_small.mp4','https://pixabay.com/it/videos/download/video-26262_medium.mp4','https://pixabay.com/it/videos/download/video-46132_tiny.mp4']
+let randomVideo = videoArray[Math.floor(Math.random() * videoArray.length)]
+video.src = randomVideo
+
 // Play & Pause ----------------------------------- //
 function togglePlay() {
   if (video.paused) {
@@ -28,8 +32,8 @@ function togglePlay() {
 function showPlayIcon() {
   playButton.classList.replace("fa-pause", "fa-play");
   playButton.setAttribute("title", "Play");
+  video.src = randomVideo
 }
-
 // On Video End, Show Play Button
 video.addEventListener("ended", showPlayIcon);
 
